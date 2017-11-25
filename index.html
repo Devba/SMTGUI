@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<titleSMT Template</title>
+<title>SMT Template</title>
 <style></style>
 </head>
    
@@ -20,17 +20,19 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="tools.js"></script>
+    
 
   
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Steem SMT GUI</a>
+      <a class="navbar-brand" href="#">Steem SMT GUIxx</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">On works</a></li>
-      <li><a href="#" onclick="alert('ppp');$('#tit1').hide()">On Works</a></li>
+      <li class="active"><a href="#" onclick="$('#navhome').show()">Home.</a></li>
+      <li><a href="#"  onclick="$('#nav2').show()">On works</a></li>
+      <li><a href="#" onclick="alert('Will be soon');">On Works</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -43,141 +45,228 @@
   
   
   
-  <div class="container">
+
+
+
+ <div class="container" id="nav2">
   <div class="row ">
-    <div class="col-md-4 col-md-offset-2">
-                 <label for="sel1">Token Name </label>  
-       <div class="input-group">
-               
-                <input type="text" class="form-control" placeholder="Token Name" id="Tkname">
-                <div class="input-group-btn">
-                  <button class="btn btn-default" type="submit" onclick ="trdeleg($('#Tkname').val());">
-                    <i class="glyphicon glyphicon-search"></i>
-                  </button>
-                </div>
-
-
-         </div>
-    
+    <div class="col-md-10 col-md-offset-1">
+              <div id="accordion" role="tablist">
+  <div class="card">
+    <div class="card-header" role="tab" id="headingOne">
+      <h5 class="mb-0">
+        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         <div class="alert alert-info " id="StartHere">
+             <strong>SMT Creation form !</strong> . Start here !
+           </div>
+         
+        </a>
+      </h5>
     </div>
-       <div class="col-md-4">
-    
-               <div class="form-group">
-                  <label for="sel1">Content Reward Curve </label>
-                  <select class="form-control" id="ContRewardCurve">
-                    <option>Lineal</option>
-                    <option>Square-root</option>
-                    <option>Bounded</option>
-                    
-                  </select>
-                </div>
-    
-    </div>
-   
-  </div>
-  <div class="row">
-      <div class="col-md-4 col-md-offset-2">
-              <label for="sel1">Max Suppy of Token </label>
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="1000000" id="Mxsupply">
-                <div class="input-group-btn">
-                 
-                </div>
 
+    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        <div class="row">
+           <div class="col-md-4">
+                  <label for="sel1">Token Name </label>  
+                       <div class="input-group">
+                              <input type="text" class="form-control" placeholder="Token Name" id="Tkname">
+                                <div class="input-group-btn">
+                                  <button class="btn btn-default" type="submit" onclick ="trdeleg($('#Tkname').val());">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                  </button>
+                                </div>
 
-               </div>
-       </div>
-    
-         <div class="col-md-4">
-               <div class="form-group">
-                  <label for="sel1">Curation Reward Curve </label>
-                  <select class="form-control" id="CRC">
-                    <option>Lineal</option>
-                    <option>Square-root</option>
-                    <option>Bounded</option>
-                    
-                  </select>
-                </div>
-          </div>    
-     <div class="col-md-4"></div>
-  </div>
-
-
-    <div class="row">
-      <div class="col-md-2 col-md-offset-2">
-                      <label for="sel1">Inflaction rate %</label>  
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="5%" id="infrate">
-                      <div class="input-group-btn">
-                            
                        </div>
+             </div>
+             <div class="col-md-4">
+                       <label for="sel1">Token Symbol </label>  
+                       <div class="input-group"><input type="text" class="form-control" placeholder="Token Symbol" id="TKSymbol"></div>
+             </div>
+             <div class="col-md-4">
+                  <label for="sel1">Creator Steem Account </label>  
+                       <div class="input-group"><input type="text" class="form-control" placeholder="p.e elautomatico" id="TKSymbol"></div>
+             </div>      
+                            
+           </div> 
+           <div class="row">
+             <div class="col-md-4 ">
+                <label for="sel1">Max Suppy of Token </label>
+                <div class="input-group"><input type="text" class="form-control" placeholder="1000" id="Mxsupply" value="1000"></div>
+             </div>
+             <div class="col-md-4 ">
+                <label for="sel1">Start Day  </label>
+                <div class="input-group"><input type="text" class="form-control" placeholder="1/1/2018" id="startday"></div>
+              </div>
+             
+               <div class="col-md-4 ">
+                 <label for="sel1">Token Generation end Date </label>
+                 <div class="input-group"><input type="text" class="form-control" placeholder="1/1/2019" id="EndDay"></div>
+                </div> 
 
+            </div> 
 
-                     </div>
-        
+           </div>
+       </div> 
+               
+
+                   
        </div>
-       
-         <div class="col-md-2">
-                <div class="form-group">
-                  <label for="sel1">Period </label>
-                  <select class="form-control" id="Period">
-                    <option>Year</option>
-                    <option>Trim</option>
-                    <option>Month</option>
-                    
-                  </select>
-                </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingTwo">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+           <div class="alert alert-warning">
+              <strong>Votes x day</strong> keeping account SP stable
+            </div>
+          
+        </a>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+       <div class="row ">
+          <div class="col-md-2">
+          <label for="sel1">Votes x day : </label>
+         <input type="text" class="form-control" placeholder="20" id="vote_regeneration_period">
+       </div>  
+       </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingThree">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <div class="alert alert-warning">
+                      <strong>Inflactions</strong> Token emition schedule
+                    </div>
+        </a>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        
 
 
-          </div>
 
-          <div class="col-md-4">
-                <div class="form-group">
-                  <label for="sel1">Raise ICO </label>
-                  <select class="form-control" id="RaiseICO">
-                    <option>Yes</option>
-                    <option>No</option>
-                    
-                    
-                  </select>
-                </div>
+                  <div class="row">
+                          <div class="col-md-2 ">
+                                          <label for="sel1">Create Tokens</label>  
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="5" id="TokCreationAmount">
+                                          <div class="input-group-btn">
+
+                                           </div>
 
 
-          </div>
-     </div>
+                                         </div>
+
+                           </div>
+
+                             <div class="col-md-2">
+                                    <div class="form-group">
+                                      <label for="sel1">Every </label>
+                                      <select class="form-control" id="interPeriod">
+                                        <option>Year</option>
+                                        <option>Trim</option>
+                                        <option>Month</option>
+
+                                      </select>
+                                    </div>
 
 
-  
+                              </div>
+                              <div class="col-md-2">
+                                            <div class="alert alert-info " id="AlertIrate">
+                                              <strong>5% aprox!</strong> syr
+                               </div>         </div>
+                               <div class="col-md-2">
+                                    <div class="form-group">
+                                      <label for="sel1">Period </label>
+                                      <select class="form-control" id="nper">
+                                        <option>For Ever</option>
+                                        <option>Limited period</option>
+                                       
+
+                                      </select>
+                                  </div>
+                                  </div>
+                                  <div class="col-md-2 ">
+                                          <label for="sel1">Periods</label>  
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="5" id="Numperiod">
+                                         </div>
+
+                                 </div>
+
+                         </div>     
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
 </div>
-  
-  
-<div class="row" style=" 
-    padding-top: 10px;
-    padding-bottom: 10px;
-"> 
-<div class="col-md-2 col-md-offset-6">
-   <button type="button" class="btn btn-danger" onclick="generate1()">Generate</button>
-</div>    
-  </div>  
-  
-  
-  <div class="container-fluid">
+    </div>  
+     </div> 
 
-    <div class="col-md-6 col-md-offset-3">
-      <div class="jumbotron">
-        <div id="txresult"><h3>Generate JSON ?</h3></div>
-      </div>  
-   </div>
+
+        <div class="card">
+    <div class="card-header" role="tab" id="headingCR">
+      <h5 class=" <div class="col-md-2">
+        <a class="collapsed" data-toggle="collapse" href="#collapseContentReward" aria-expanded="false" aria-controls="collapseContentReward">
+                    <div class="alert alert-warning"><strong>Content Reward distribution!</strong></div>    
+         </a>
+      </h5>
+    </div>
+    <div id="collapseContentReward" class="collapse" role="tabpanel" aria-labelledby="headingCR" data-parent="#accordion">
+      <div class="card-body">
+       <div class="row ">
+        <div class="col-md-2">
+             <div class="form-group">
+
+                  <label for="sel1">Curve type </label>
+                   <select class="form-control" id="ContRewardCurve">
+                      <option>Lineal</option>
+                      <option>Square-root</option>
+                      <option>Bounded</option>
+
+                    </select>
+
+                                      
+              </div>
+          </div>
+          <div class="col-md-2">
+          <label for="sel1">Votes x day : </label>
+         <input type="text" class="form-control" placeholder="20" id="vote_regeneration_period">
+       </div>  
+      
+
+       </div>
+       <div class="row ">
+          <div class="col-md-10">
+           <p>Lineal: If Mike vote power is 75  and Jose vote power is 25 , if they vote at the same time and are the only voters, Mike will get 75% , Jose 25 % of the reward generated</p>
+           <p>Square: If Mike vote power is 75  and Jose vote power is 25 , if they vote at the same time and are the only voters, Mike will get 90% , Jose 10 % of the reward generated</p> 
+          </div> 
+       </div>  
+    </div>
+  </div>
+
+           <div class="alert alert-success alert-dismissable">
+            <a href="#"  data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Success!</strong> Indicates a successful or positive action.
+          </div>
+      </div> 
   
-</div>
   
-  
-  
-  
-  
+
   
    <script> $(document).ready(function() {
-
+       
   });
 
 
@@ -208,6 +297,14 @@ curve_id curation_reward_curve;"*/
 
 }
 
+
+
+$("#TokCreationAmount").change(function(){
+    //alert("The text has been changed.");
+    var vrate=interestRate($("#TokCreationAmount").val(),$("#Mxsupply").val(),$("#interPeriod").val())
+    $("#AlertIrate").html(vrate)
+    
+});
 
  </script>
 </body>
